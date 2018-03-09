@@ -10,17 +10,17 @@ metadata:
   namespace: flask
 ---
 kind: Role
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: flask-backend-role
   namespace: flask
 rules:
   - apiGroups: [""]
-    resources: ["pod"]
+    resources: ["pods"]
     verbs: ["get", "list", "watch"]
 ---
 kind: RoleBinding
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: flask-backend-role-binding
   namespace: flask
