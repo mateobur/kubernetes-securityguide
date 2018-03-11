@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: flask-cap
+  name: flask-ro
   namespace: default
 spec:
   containers:
   - image: mateobur/flask
-    name: flask-cap
+    name: flask-ro
     securityContext:
       readOnlyRootFilesystem: true
