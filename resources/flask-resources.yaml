@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: flask-resources
+  namespace: default
+spec:
+  containers:
+  - image: mateobur/flask
+    name: flask-resources
+    resources:
+      requests:
+        memory: 512Mi
+      limits:
+        memory: 700Mi
